@@ -1,36 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Matt's IT Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    img {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .caption {
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    nav {
+      background-color: #003366;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; line-height: 1.6; padding: 2rem;">
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">Resume</a>
+    <a href="mailto:your@email.com">Contact</a>
+  </nav>
+
   <h1>Matt's Networking & IT Portfolio</h1>
 
   <h2>🖥️ Windows Server VM Setup</h2>
-  <p><strong>Project Summary:</strong> Installed and configured Windows Server 2019 on a virtual machine using Oracle VirtualBox. Promoted the server to a Domain Controller, created user accounts and groups using Active Directory, and tested domain login functionality.</p>
+  <p><strong>Project Summary:</strong> Installed and configured Windows Server 2019 on a virtual machine using Oracle VirtualBox. Promoted the server to a Domain Controller, created user accounts and groups using Active Directory, enforced security through Group Policy Objects (GPO), and configured static IP addressing.</p>
 
   <h3>Tools Used:</h3>
   <ul>
     <li>Oracle VirtualBox</li>
     <li>Windows Server 2019</li>
-    <li>Active Directory Domain Services</li>
-    <li>PowerShell / Server Manager</li>
+    <li>Active Directory Domain Services (AD DS)</li>
+    <li>Group Policy Management Console (GPMC)</li>
   </ul>
 
-  <h3>What I Learned:</h3>
-  <p>Hands-on experience with installing and managing Windows Server, using Active Directory to manage user accounts, and configuring domain environments in a virtual lab setting.</p>
+  <h3>Lab Walkthrough with Screenshots</h3>
 
-  <h2>Screenshots from My Lab</h2>
-  <img src="Picture2.jpg" alt="Server Install Setup" width="600">
-  <img src="Picture3.jpg" alt="Windows Installing" width="600">
-  <img src="Picture4.png" alt="Static IP Setup" width="600">
-  <img src="Picture5.jpg" alt="System Properties" width="600">
-  <img src="Picture6.jpg" alt="Feature Install Success" width="600">
-  <img src="Picture10.jpg" alt="GPO Configuration" width="600">
-  <img src="Picture11.jpg" alt="Password Policy Enforced" width="600">
-  <img src="Picture12.jpg" alt="User Management Panel" width="600">
-  <img src="Picture13.jpg" alt="Group Policy Creation" width="600">
-  <img src="Picture14.jpg" alt="GPO Editor" width="600">
+  <img src="Picture2.jpg" alt="Administrator setup">
+  <div class="caption">Setting the built-in Administrator password during initial Windows Server setup.</div>
+
+  <img src="Picture3.jpg" alt="Installing Windows">
+  <div class="caption">Windows Server installation in progress — copying files and prepping for first boot.</div>
+
+  <img src="Picture4.png" alt="Static IP settings">
+  <div class="caption">Manually assigning a static IP address and DNS configuration for server communication.</div>
+
+  <img src="Picture5.jpg" alt="System name">
+  <div class="caption">Renaming the server to a meaningful hostname: JCB-MattDC, which will be used for domain setup.</div>
+
+  <img src="Picture6.jpg" alt="AD DS install">
+  <div class="caption">Installation of Active Directory Domain Services and necessary administration tools completed successfully.</div>
+
+  <img src="Picture7.jpg" alt="DNS warning">
+  <div class="caption">DNS configuration and delegation warnings after initiating domain controller promotion — typical in isolated lab setups.</div>
+
+  <img src="Picture8.jpg" alt="Empty AD OU">
+  <div class="caption">Active Directory Users and Computers showing default OUs before user creation.</div>
+
+  <img src="Picture9.jpg" alt="Users in Accounting OU">
+  <div class="caption">Created users Alice Miller and Bob Clark under the Accounting organizational unit.</div>
+
+  <img src="Picture10.jpg" alt="Sales OU">
+  <div class="caption">Created and populated the Sales OU with Charlie Davis and Diana Evans.</div>
+
+  <img src="Picture11.jpg" alt="Admins OU">
+  <div class="caption">Admins OU populated with Ian Jones and Julia King — future IT administrators.</div>
+
+  <img src="Picture12.jpg" alt="Management OU">
+  <div class="caption">Management OU with Kevin Lewis and Laura Martin — demonstrating group-based AD structure.</div>
+
+  <img src="Picture13.jpg" alt="Create GPO">
+  <div class="caption">Creating a new Group Policy Object named "JCB Password Policy" using Group Policy Management.</div>
+
+  <img src="Picture14.jpg" alt="Password Policy">
+  <div class="caption">Enforcing password complexity and expiration settings through GPO to enhance security.</div>
+
+  <footer>
+    <p>Built by Matt | Connect via <a href="mailto:your@email.com">email</a> | All screenshots from local lab</p>
+  </footer>
 </body>
 </html>
